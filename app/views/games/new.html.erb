@@ -1,0 +1,10 @@
+<h1>Games#new</h1>
+<p>Find me in app/views/games/new.html.erb</p>
+<p><%= @letters %></p>
+<form action="/score" method="POST">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letter, @letters %>
+  <input type="text" name="word">
+  <input type="submit" value="Guess!">
+</form>
+<p>To reset your score type "reset!"</p>
